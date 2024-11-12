@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Objet1
   - Objet2
+  - Cle
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Quand la clé rentre dans le is trigger collider la porte se supprime
 
 public class ColliderCle : MonoBehaviour
 {

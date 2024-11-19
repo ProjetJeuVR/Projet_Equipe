@@ -23330,7 +23330,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2075135605}
   - component: {fileID: 2075135604}
-  - component: {fileID: 2075135606}
   m_Layer: 0
   m_Name: lumiere
   m_TagString: Untagged
@@ -23370,20 +23369,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075135606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075135603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6fec2150c321644bb963e1e36ee8c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sliderLumiere: {fileID: 0}
-  lumiere: {fileID: 0}
 --- !u!1 &2084047676
 GameObject:
   m_ObjectHideFlags: 0
@@ -24013,7 +23998,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderLumiere: {fileID: 2113844803}
-  lumiere: {fileID: 0}
+  lumiere: {fileID: 2075135603}
+  floatChiffre:
+    m_OverrideState: 0
+    m_Value: 2
+  floatstart:
+    m_OverrideState: 0
+    m_Value: -3
 --- !u!1 &2118244520
 GameObject:
   m_ObjectHideFlags: 0

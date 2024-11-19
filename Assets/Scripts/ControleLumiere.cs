@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
@@ -15,9 +15,14 @@ public class ControleLumiere : MonoBehaviour
     //public PostProcessProfile lumiere;
 
     public GameObject lumiere;
+    public Volume volumeLum;
 
-    public FloatParameter floatChiffre;
-    public FloatParameter floatstart;
+    public ColorAdjustments colorAdjustments;
+
+
+
+    public UnityEngine.Rendering.FloatParameter floatChiffre;
+    public UnityEngine.Rendering.FloatParameter floatpost;
 
 
     //AutoExposure exposure;
@@ -25,8 +30,11 @@ public class ControleLumiere : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //volumeLum.profile.TryGet<ColorAdjustments>(out colorAdjustments);
+        colorAdjustments.postExposure = floatpost;
 
-        lumiere.GetComponent<ColorAdjustments>().postExposure = floatChiffre;
+        volumeLum.GetComponent<ColorAdjustments>().postExposure = floatpost;
+        //lumiere.GetComponent<ColorAdjustments>().postExposure = floatpost;
 
         if (!PlayerPrefs.HasKey("choixLumiere"))
         {

@@ -10,8 +10,8 @@ public class CombineObjets : MonoBehaviour
     public GameObject objet3Prefab;
 
     // Tag des objets
-    public string tagObjet1 = "Objet1";
-    public string tagObjet2 = "Objet2";
+    public string tagObjet1;
+    public string tagObjet2;
 
     private void OnCollisionEnter(Collision collision)
     {

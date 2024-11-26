@@ -7,6 +7,10 @@ TagManager:
   - Objet1
   - Objet2
   - Cle
+  - batterie1
+  - batterie2
+  - batterie3
+  - electricite
   layers:
   - Default
   - TransparentFX

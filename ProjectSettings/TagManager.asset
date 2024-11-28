@@ -11,6 +11,8 @@ TagManager:
   - batterie2
   - batterie3
   - electricite
+  - bouton1
+  - bouton2
   layers:
   - Default
   - TransparentFX

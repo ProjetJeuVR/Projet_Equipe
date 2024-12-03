@@ -2,49 +2,59 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveDesactiverObjet : MonoBehaviour
+public class GestionObjetsTrigger : MonoBehaviour
 {
-    // Objets à activer/désactiver lorsque le joueur entre dans la zone
-    public GameObject objetADesactiver; // L'objet qui sera désactivé
-    public GameObject objetActiver;    // L'objet qui sera activé
+    [Header("Objets à désactiver")]
+    [Tooltip("Ajoutez ici tous les objets à désactiver.")]
+    public List<GameObject> objetsADesactiver;
 
-    // Clip audio à jouer lors du déclenchement
+    [Header("Objets à activer")]
+    [Tooltip("Ajoutez ici tous les objets à activer.")]
+    public List<GameObject> objetsAAfficher;
+
+    [Header("Son à jouer")]
+    [Tooltip("Le son qui sera joué lorsqu'on entre dans le trigger.")]
     public AudioClip sonJouer;
-    private AudioSource sourceAudio; // Source audio pour jouer le son.
 
-    // Booléen pour éviter que l'événement se déclenche plusieurs fois
+    // Booléen pour s'assurer que l'événement ne se produit qu'une fois
     private bool dejaDeclenche = false;
 
-    // Méthode appelée automatiquement lorsqu'un autre Collider entre dans celui de cet objet (si "Is Trigger" est activé)
+    // Méthode appelée lorsqu'un objet entre dans le trigger
     private void OnTriggerEnter(Collider autre)
     {
-        // Vérifie si l'objet entrant a le tag "Joueur" et si l'événement n'a pas encore été déclenché
+        // Vérifie que l'objet entrant est le joueur et que l'événement n'a pas encore été déclenché
         if (autre.CompareTag("Joueur") && !dejaDeclenche)
         {
-            dejaDeclenche = true; // Marque l'événement comme déjà déclenché pour éviter les répétitions
-
-            if (sonJouer != null)
-            {
-                sourceAudio.PlayOneShot(sonJouer); // Joue le son.
-            }
-
-            AfficherObjet();      // Appelle la méthode pour activer/désactiver les objets
+            dejaDeclenche = true; // Marque l'événement comme déclenché
+            DeclencherEvenement(); // Exécute la logique principale
         }
     }
 
-    // Méthode qui gère l'activation/désactivation des objets et le son
-    private void AfficherObjet()
+    // Gère l'apparition/disparition des objets et joue un son
+    private void DeclencherEvenement()
     {
-        // Désactive l'objet spécifié, si celui-ci est assigné
-        if (objetADesactiver != null)
+        // Désactive tous les objets dans la liste des objets à désactiver
+        foreach (GameObject objet in objetsADesactiver)
         {
-            objetADesactiver.SetActive(false);
+            if (objet != null)
+            {
+                objet.SetActive(false);
+            }
         }
 
-        // Active l'autre objet spécifié, si celui-ci est assigné
-        if (objetActiver != null)
+        // Active tous les objets dans la liste des objets à activer
+        foreach (GameObject objet in objetsAAfficher)
         {
-            objetActiver.SetActive(true);
+            if (objet != null)
+            {
+                objet.SetActive(true);
+            }
+        }
+
+        // Joue le son, si un clip audio est assigné
+        if (sonJouer != null)
+        {
+            AudioSource.PlayClipAtPoint(sonJouer, transform.position);
         }
     }
 }

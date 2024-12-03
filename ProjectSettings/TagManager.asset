@@ -13,6 +13,7 @@ TagManager:
   - electricite
   - bouton1
   - bouton2
+  - Joueur
   layers:
   - Default
   - TransparentFX

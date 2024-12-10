@@ -11243,7 +11243,7 @@ MonoBehaviour:
   - {fileID: 158023022}
   - {fileID: 1009202567}
   - {fileID: 43341964}
-  sonJouer: {fileID: 0}
+  sonJouer: {fileID: 8300000, guid: 3db2592bb746c5947b47ce45b598941c, type: 3}
 --- !u!65 &409128276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39397,7 +39397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetCible: {fileID: 991914628}
-  sonJouer: {fileID: 8300000, guid: d07d859ed465ada49a64d0b5df5e6ac0, type: 3}
+  sonJouer: {fileID: 8300000, guid: 3db2592bb746c5947b47ce45b598941c, type: 3}
   dureeApparition: 3
 --- !u!1 &1507538812
 GameObject:
@@ -50993,7 +50993,7 @@ MonoBehaviour:
   - {fileID: 53642843}
   objetsAAfficher:
   - {fileID: 460575707}
-  sonJouer: {fileID: 8300000, guid: d07d859ed465ada49a64d0b5df5e6ac0, type: 3}
+  sonJouer: {fileID: 8300000, guid: 823c671f553f61f478f8b6fda637941d, type: 3}
 --- !u!1 &1951869613
 GameObject:
   m_ObjectHideFlags: 0

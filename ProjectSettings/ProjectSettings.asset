@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany_James
-  productName: Quilles_James_Ling
+  companyName: DefaultCompany_Yannick_Marguerite_James_VR_Final
+  productName: Yannick_Marguerite_James_VR_Final
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,8 +140,6 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 11400000, guid: dd2ea5d706ee04e4f847fad784a99e0d, type: 2}
-  - {fileID: 3437073598875926758, guid: aed1b35467f79264f8882895d9f16505, type: 2}
-  - {fileID: 11400000, guid: dc7420adb0a59c04aadfc9b79f565635, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
